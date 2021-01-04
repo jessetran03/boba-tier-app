@@ -1,0 +1,25 @@
+.shop-tea-ranking ol {
+  list-style-position: inside;
+}
+
+.shop-tea-ranking li {
+  padding: 15px 10px;
+  margin: 10px auto;
+  border-style: solid;
+  border-radius: 25px;
+  max-width: 300px;
+}
+
+.shop-tea-list ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.shop-tea-list li {
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.shop-tea-list div {
+  border-style: solid;
+}

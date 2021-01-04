@@ -1,0 +1,10 @@
+.shop-comments ul {
+  list-style: none;
+}
+
+.shop-comments li {
+  border-radius: 20px;
+  border-style: solid;
+  max-width: 900px;
+  margin: 10px auto;
+}

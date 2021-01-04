@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #444444;
+  text-align: center;
+  min-width: 300px;
+}
+
+nav {
+  padding: 1% 0;
+  background-color: #AAAAAA;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header {
+  padding: 45px 15px;
+}
+
+section {
+  padding: 30px 15px 0;
+}
+
+p, h2 {
+  margin: 23px 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cities {
+  margin-top: 10px;
+}
+
+.cities li {
+  display: inline;
+}

@@ -1,0 +1,37 @@
+.rankings {
+  margin: 10px 100px;
+  display: flex;
+  justify-content: space-evenly
+}
+
+.boba-shop-ranking ol {
+  list-style-position: inside;
+  margin: 10px;
+  padding: 10px;
+}
+
+.boba-tea-ranking ol {
+  list-style-position: inside;
+  margin: 10px;
+  padding: 10px;
+}
+
+.boba-shop-ranking li {
+  padding: 15px 10px;
+  margin: 10px auto;
+  border-style: solid;
+  border-radius: 20px;
+  max-width: 300px;
+}
+
+.boba-tea-ranking h4 {
+  margin: 5px;
+}
+
+.boba-tea-ranking li {
+  padding: 10px 10px;
+  margin: 10px auto;
+  border-style: solid;
+  border-radius: 25px;
+  max-width: 300px;
+}

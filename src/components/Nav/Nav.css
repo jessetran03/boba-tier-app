@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  padding: 0.5% 0;
+  margin-bottom: 20px;
+  background-color: #BBBBBB;
+  box-shadow: 0 5px 5px #777777;
+  justify-content: space-between;
+}
+
+nav p, nav select {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav select {
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.nav-header, .nav-links {
+  margin: auto 5px;
+}
+
+.active p {
+  color: #000000;
+}
+
+@media all and (min-width: 1200px) {
+  .nav-header {
+    margin-left: 200px;
+  }
+
+  .nav-links {
+    margin-right: 200px;
+  }
+}

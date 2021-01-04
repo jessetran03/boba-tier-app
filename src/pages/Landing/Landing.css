@@ -1,0 +1,16 @@
+.landing-cities li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.landing-cities button {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.landing-cities button:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}

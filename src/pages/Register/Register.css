@@ -1,0 +1,25 @@
+.register label {
+  display: block;
+  margin: 2px autp;
+}
+
+.register input {
+  display: block;
+  margin: 2px auto;
+  padding: 4px;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.register button {
+  margin: 20px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 15px;
+  padding: 6px;
+}
+
+.register button:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
