@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import './Rankings.css'
 import { Link } from 'react-router-dom'
+import STORE from '../../STORE'
 // import config from '../config'
 // import TokenService from '../services/token-service'
 
 export default class Rankings extends Component {
   state = {
-    bobaShops: [],
+    shops: STORE.shops,
   }
 
   render() {
+    const shops = this.state.shops
     return (
       <>
       <h2>Houston, TX</h2>
@@ -17,15 +19,16 @@ export default class Rankings extends Component {
         <section className="boba-shop-ranking">
           <h3>Top 5 Rated Boba Shops</h3>
           <ol>
-            <li>7 Leaves Cafe</li>
-            <li>
-              <Link to='/shop/sharetea-houston'>
-                Sharetea
-              </Link>
-            </li>
-            <li>Tea Top</li>
-            <li>Kung Fu Tea</li>
-            <li>The Teahouse Tapioca & Tea</li>
+            {shops
+              .sort((a,b) => a.average_rating < b.average_rating ? 1 : -1)
+              .slice(0, 7)
+              .map(shop =>
+                <li key={shop.id}>
+                  <Link to='/shop/'>
+                    {shop.store_name}
+                  </Link>
+                </li>
+              )}
           </ol>
         </section>
         <section className="boba-tea-ranking">
@@ -38,10 +41,12 @@ export default class Rankings extends Component {
             <li>
               <h4>Japanese Matcha Soy Tea</h4>
               <p><i>7 Leaves Cafe</i></p>
-            </li><li>
+            </li>
+            <li>
               <h4>Okinawa Milk Tea</h4>
               <p><i>Sharetea</i></p>
-            </li><li>
+            </li>
+            <li>
               <h4>Brown Sugar Boba Milk with Cream mousse</h4>
               <p><i>Tiger Sugar</i></p>
             </li>

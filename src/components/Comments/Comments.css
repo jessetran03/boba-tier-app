@@ -8,3 +8,11 @@
   max-width: 900px;
   margin: 10px auto;
 }
+
+.shop-comments textarea {
+  font-size: 18px;
+  font-family: sans-serif;
+  width: 700px;
+  height: 200px;
+  padding: 20px;
+}

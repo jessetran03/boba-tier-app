@@ -1,0 +1,23 @@
+.my-lists {
+  margin: 10px 100px;
+  display: flex;
+  justify-content: space-evenly
+}
+
+.my-favorites ol {
+  list-style-position: inside;
+  margin: 10px;
+  padding: 10px;
+}
+
+.my-favorites h4 {
+  margin: 5px;
+}
+
+.my-favorites li {
+  padding: 10px 10px;
+  margin: 10px auto;
+  border-style: solid;
+  border-radius: 25px;
+  max-width: 500px;
+}

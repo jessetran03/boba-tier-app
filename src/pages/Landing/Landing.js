@@ -28,6 +28,7 @@ export default class Landing extends Component {
           <li><button>Houston</button></li>
           <li><button>Dallas</button></li>
           <li><button>San Francisco</button></li>
+          <li><button>Austin</button></li>
         </ul>
         <p>More cities to come later!</p>
         <FontAwesomeIcon className='star' icon='star' />

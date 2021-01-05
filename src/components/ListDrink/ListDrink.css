@@ -1,0 +1,19 @@
+.heart {
+  color: #777777;
+  cursor: pointer;
+}
+
+.star {
+  color:#777777;
+  cursor: pointer;
+}
+
+.heart:hover {
+  color: #222222;
+  cursor: pointer;
+}
+
+.star:hover {
+  color:#111111;
+  cursor: pointer;
+}

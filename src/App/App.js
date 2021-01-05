@@ -3,21 +3,11 @@ import { Route } from 'react-router-dom'
 import Landing from '../pages/Landing/Landing'
 import Login from '../pages/Login/Login'
 import Register from '../pages/Register/Register'
+import MyLists from '../pages/MyLists/MyLists'
 import Rankings from '../pages/Rankings/Rankings'
 import Shop from '../pages/Shop/Shop'
 import Nav from '../components/Nav/Nav'
 import './App.css'
-
-/*{
-  ['/workouts/:workoutId'].map(path =>
-    <Route
-      exact
-      key={path}
-      path={path}
-      component={WorkoutExerciseList}
-    />
-  )
-}*/
 
 class App extends Component {
   renderMainRoutes() {
@@ -37,6 +27,11 @@ class App extends Component {
           exact
           path='/register'
           component={Register}
+        />
+        <Route
+          exact
+          path='/lists'
+          component={MyLists}
         />
         <Route
           path='/rankings'

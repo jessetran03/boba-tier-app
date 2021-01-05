@@ -10,6 +10,19 @@ body {
   min-width: 300px;
 }
 
+button {
+  margin: 20px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 15px;
+  padding: 6px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
+
 a:link {
   color: #555555;
   text-decoration: none;

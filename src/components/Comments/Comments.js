@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import './Comments.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import config from '../config'
 // import TokenService from '../services/token-service'
 
 export default class Comments extends Component {
+
+
+  handleAddComment = e => {
+    e.preventDefault()
+    console.log('Successfully posted comment')
+  }
 
   render() {
     return (
@@ -12,9 +18,15 @@ export default class Comments extends Component {
 
         <section className="shop-comments">
           <h3>Comments / Reviews</h3>
-          <form>
-            <input />
-            <button>Leave a review</button>
+          <form onSubmit={this.handleAddComment}>
+            <textarea 
+              required
+              maxLength="500"
+            />
+            <br />
+            <button
+              type='submit'
+            >Leave a review</button>
           </form>
           <ul>
             <li>

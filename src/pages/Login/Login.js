@@ -20,7 +20,7 @@ export default class Login extends Component {
           <label htmlFor='username-input'>
             Username:
           </label>
-          <input type='text' id='username-input' name='username' />
+          <input type='text' id='username-input' name='username' autoFocus />
           <br />
           <label htmlFor='password-input' className='password-label'>
             Password:

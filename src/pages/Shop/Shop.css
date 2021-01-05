@@ -1,5 +1,6 @@
 .shop-tea-ranking ol {
   list-style-position: inside;
+  padding: 10px;
 }
 
 .shop-tea-ranking li {
@@ -22,4 +23,22 @@
 
 .shop-tea-list div {
   border-style: solid;
+  border-radius: 25px;
+  padding: 3px 4px;
+}
+
+.shop-tea-list .open:hover {
+  cursor: pointer;
+}
+
+.shop-tea-list h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.shop-tea-list input {
+  width: 300px;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 25px;
 }
