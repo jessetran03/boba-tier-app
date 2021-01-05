@@ -31,13 +31,8 @@ export default class Landing extends Component {
           <li><button>Austin</button></li>
         </ul>
         <p>More cities to come later!</p>
-        <FontAwesomeIcon className='star' icon='star' />
-        <FontAwesomeIcon className='star' icon={['far', 'star']} />
-        <FontAwesomeIcon className='check-square' icon='check-square' />
+        <FontAwesomeIcon className='check-square' icon='check-square' />&nbsp;
         <FontAwesomeIcon className='check-square' icon={['far', 'check-square']} />
-        <FontAwesomeIcon className='heart' icon='heart' />
-        <FontAwesomeIcon className='heart' icon={['far', 'heart']} />
-        <FontAwesomeIcon icon='angle-down' />
       </section>
     )
   }

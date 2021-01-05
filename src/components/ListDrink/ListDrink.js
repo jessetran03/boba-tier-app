@@ -20,7 +20,7 @@ export default class ListDrink extends Component {
   renderClosed() {
     return (
       <div onClick={this.handleClickOpen} className='open'>
-        <FontAwesomeIcon className='angle' icon='angle-down' />
+        <FontAwesomeIcon className='angle' icon='angle-down' pull='left' />
         &nbsp;
         {this.props.drink}
       </div>
@@ -31,12 +31,10 @@ export default class ListDrink extends Component {
     return (
       <div>
         <span onClick={this.handleClickClose} className='open'>
-          <FontAwesomeIcon className='angle' icon='angle-up' />
+          <FontAwesomeIcon className='angle' icon='angle-up' pull='left' />
             &nbsp;
             {this.props.drink}
         </span>
-        <br /><br />
-        <FontAwesomeIcon className='heart' icon='heart' />
         <br /><br />
         <FontAwesomeIcon className='star' icon={['far', 'star']} />
         <FontAwesomeIcon className='star' icon={['far', 'star']} />

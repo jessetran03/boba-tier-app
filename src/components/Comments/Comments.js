@@ -6,7 +6,6 @@ import './Comments.css'
 
 export default class Comments extends Component {
 
-
   handleAddComment = e => {
     e.preventDefault()
     console.log('Successfully posted comment')

@@ -10,8 +10,18 @@ body {
   min-width: 300px;
 }
 
+select {
+  width: 200px;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
 button {
-  margin: 20px 5px;
   font-size: 15px;
   font-weight: 500;
   border-radius: 15px;
@@ -21,6 +31,11 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #CCCCCC;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 a:link {

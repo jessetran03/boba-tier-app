@@ -5,6 +5,7 @@ import Login from '../pages/Login/Login'
 import Register from '../pages/Register/Register'
 import MyLists from '../pages/MyLists/MyLists'
 import Rankings from '../pages/Rankings/Rankings'
+import ShopList from '../pages/ShopList/ShopList'
 import Shop from '../pages/Shop/Shop'
 import Nav from '../components/Nav/Nav'
 import './App.css'
@@ -36,6 +37,10 @@ class App extends Component {
         <Route
           path='/rankings'
           component={Rankings}
+        />
+        <Route
+          path='/shops'
+          component={ShopList}
         />
         {['/shop/:shopId'].map(path =>
           <Route

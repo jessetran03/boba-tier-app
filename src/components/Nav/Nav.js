@@ -28,11 +28,14 @@ export default class Nav extends Component {
             <NavLink to='/lists' activeClassName='active'>
               <p>My Lists</p>
             </NavLink>
+            <NavLink to='/shops' activeClassName='active'>
+              <p>Shop List</p>
+            </NavLink>
             <NavLink to='/rankings' activeClassName='active'>
               <p>Rankings</p>
             </NavLink>
             <NavLink to='/shop/sharetea-houston' activeClassName='active'>
-              <p>Sharetea</p>
+              <p>Sharetea (example shop)</p>
             </NavLink>
             <select>
               <option value='Houston'>Houston</option>

@@ -21,7 +21,7 @@ export default class Shop extends Component {
     const drinks = listDrinks.filter(drink => drink.store_id === 2)
     return (
       <>
-        <h2>Sharetea</h2>
+        <h2>Sharetea (Example shop)</h2>
 
         <section className="shop-tea-ranking">
           <h3>Top 5 Drinks</h3>
