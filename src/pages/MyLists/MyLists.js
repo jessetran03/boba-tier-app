@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './MyLists.css'
 import Rating from '../../components/Rating/Rating'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import STORE from '../../STORE'
 // import config from '../config'
 // import TokenService from '../services/token-service'

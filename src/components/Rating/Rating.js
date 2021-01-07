@@ -11,10 +11,10 @@ export default class Rating extends Component {
   render() {
     const rated = [];
     for (let i = 0; i < this.props.rating; i++) {
-      rated.push(<FontAwesomeIcon className='star-rated' icon='star' />)
+      rated.push(<FontAwesomeIcon key={i+1} className='star-rated' icon='star' />)
     }
     for (let i = 0; i < 5 - this.props.rating; i++) {
-      rated.push(<FontAwesomeIcon className='star-unrated' icon='star' />)
+      rated.push(<FontAwesomeIcon key={i+1} className='star-unrated' icon='star' />)
     }
     return rated;
   }

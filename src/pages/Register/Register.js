@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
-// import config from '../config'
-// import PropTypes from 'prop-types'
+import config from '../../config'
+import PropTypes from 'prop-types'
 import './Register.css'
 
 export default class Register extends Component {
   state = {
     error: null
+  }
+  static propTypes = {
+    location: PropTypes.object,
+    history: PropTypes.object
   }
 
   handleRegisterSuccess = () => {
@@ -14,10 +18,11 @@ export default class Register extends Component {
     history.push(destination)
   }
 
-  /* handleRegister = e => {
+  handleRegister = e => {
     e.preventDefault()
     const newUser = {
-      full_name: e.target['full-name'].value,
+      first_name: e.target['first-name'].value,
+      last_name: e.target['last-name'].value,
       user_name: e.target['username'].value,
       password: e.target['password'].value,
     }
@@ -39,7 +44,7 @@ export default class Register extends Component {
       .catch(res => {
         this.setState({ error: res.error })
       })
-  }; */
+  };
 
   render() {
     const { error } = this.state

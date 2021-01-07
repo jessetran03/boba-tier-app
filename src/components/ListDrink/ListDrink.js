@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
+import UserRating from '../UserRating/UserRating'
 import './ListDrink.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import TokenService from '../services/token-service'
-// import config from '../config'
 
 export default class ListDrink extends Component {
   state = {
@@ -23,6 +22,7 @@ export default class ListDrink extends Component {
         <FontAwesomeIcon className='angle' icon='angle-down' pull='left' />
         &nbsp;
         {this.props.drink}
+        {this.props.rating && <FontAwesomeIcon className='check-square' icon='check-square' pull='right' />}
       </div>
     )
   }
@@ -34,13 +34,15 @@ export default class ListDrink extends Component {
           <FontAwesomeIcon className='angle' icon='angle-up' pull='left' />
             &nbsp;
             {this.props.drink}
+            {this.props.rating && <FontAwesomeIcon className='check-square' icon='check-square' pull='right'/>}
         </span>
         <br /><br />
-        <FontAwesomeIcon className='star' icon={['far', 'star']} />
-        <FontAwesomeIcon className='star' icon={['far', 'star']} />
-        <FontAwesomeIcon className='star' icon={['far', 'star']} />
-        <FontAwesomeIcon className='star' icon={['far', 'star']} />
-        <FontAwesomeIcon className='star' icon={['far', 'star']} />
+        <UserRating
+          drinkId={this.props.id}
+          ratingId={this.props.ratingId}
+          rating={this.props.rating}
+          onGetDrinks={this.props.onGetDrinks}
+        />
       </div>
     )
   }

@@ -21,3 +21,8 @@
   cursor: pointer;
   background-color: #CCCCCC;
 }
+
+.spinner {
+  margin: 30px;
+  font-size: 30px;
+}

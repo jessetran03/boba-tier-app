@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 //import TokenService from '../services/token-service'
 import './Landing.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,14 +25,15 @@ export default class Landing extends Component {
           Rate the best boba tea in town. Pick a city to get started.
         </section>
         <ul className="landing-cities">
-          <li><button>Houston</button></li>
-          <li><button>Dallas</button></li>
-          <li><button>San Francisco</button></li>
-          <li><button>Austin</button></li>
+          <li key='1'>
+            <Link to='/shops'>
+              <button>Houston</button>
+            </Link>
+          </li>
         </ul>
         <p>More cities to come later!</p>
         <FontAwesomeIcon className='check-square' icon='check-square' />&nbsp;
-        <FontAwesomeIcon className='check-square' icon={['far', 'check-square']} />
+        <FontAwesomeIcon className='check-square' icon={['far', 'check-square']} />&nbsp;
       </section>
     )
   }

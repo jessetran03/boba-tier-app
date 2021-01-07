@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 
-.star {
+.user-star {
   color:#777777;
   cursor: pointer;
 }
@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.star:hover {
+.user-star:hover {
   color:#111111;
   cursor: pointer;
 }

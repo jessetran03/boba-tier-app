@@ -39,10 +39,11 @@ class App extends Component {
           component={Rankings}
         />
         <Route
+          exact
           path='/shops'
           component={ShopList}
         />
-        {['/shop/:shopId'].map(path =>
+        {['/shops/:shopId'].map(path =>
           <Route
             exact
             key={path}

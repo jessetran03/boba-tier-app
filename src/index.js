@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStar, faCheckSquare, faHeart, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faCheckSquare, faHeart, faAngleDown, faAngleUp, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { faStar as farStar, faCheckSquare as farCheckSquare, faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'
 import App from './App/App'
 import './index.css'
@@ -17,6 +17,7 @@ library.add(
   farHeart,
   faAngleDown,
   faAngleUp,
+  faSpinner,
 )
 
 ReactDOM.render(
