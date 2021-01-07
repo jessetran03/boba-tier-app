@@ -59,8 +59,7 @@ export default class Shop extends Component {
 
   getDrinks = () => {
     const { shopId } = this.props.match.params
-    //return fetch(`${config.API_ENDPOINT}/drinks/shop/${shopId}`, {
-    return fetch(`${config.API_ENDPOINT}/drinks/rating/${shopId}`, {
+    return fetch(`${config.API_ENDPOINT}/drinks/shops/${shopId}`, {
       method: 'GET',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
@@ -119,6 +118,9 @@ export default class Shop extends Component {
 
         <section className="shop-tea-ranking">
           <h3>Top 5 Drinks</h3>
+          {rankedDrinks.length === 0 && 
+            <p><i>Looks like there are no ratings for this store yet. Leave some ratings!</i></p>
+          }
           <ol>
             {rankedDrinks
               .slice(0, 5)
@@ -140,6 +142,9 @@ export default class Shop extends Component {
         <section className="shop-tea-list">
           <h3>List of drinks:</h3>
           <h4>Leave your rating!</h4>
+          {drinks.length === 0 && 
+            <p><i>Looks like no drinks have been added to this store yet. Add some drinks below!</i></p>
+          }
           <ul>
             {drinks
               .sort((a,b) => a.id > b.id ? 1 : -1)
