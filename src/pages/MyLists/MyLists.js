@@ -73,9 +73,9 @@ export default class Rankings extends Component {
         <form onSubmit={this.handleFilter}>
           <h4>Filter by store:</h4>
           <select onChange={this.onChange}>
-            <option>All</option>
+            <option key='all' value='all'>All</option>
             {shops.map(shop =>
-              <option value={shop.id}>{shop.shop_name}</option>
+              <option key={shop.id} value={shop.id}>{shop.shop_name}</option>
             )}
           </select>
           <button type='submit'>Apply Filter</button>
@@ -88,7 +88,7 @@ export default class Rankings extends Component {
                 <p>You have not rated any drinks for this shop</p>
               }
               {drinks.map(drink =>
-                <li>
+                <li key={drink.id}>
                   <h4>{drink.drink_name}</h4>
                   <Rating rating={drink.rating} />
                   <p><i>{drink.shop_name}</i></p>

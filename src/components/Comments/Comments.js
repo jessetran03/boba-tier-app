@@ -1,10 +1,66 @@
 import React, { Component } from 'react'
 import './Comments.css'
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import config from '../config'
-// import TokenService from '../services/token-service'
+import config from '../../config'
+import TokenService from '../../services/token-service'
+import moment from 'moment';
 
 export default class Comments extends Component {
+  state = {
+    comments: []
+  }
+
+  componentDidMount() {
+    this.getComments()
+  }
+
+  getComments = () => {
+    const shopId = this.props.shopId
+    return fetch(`${config.API_ENDPOINT}/shops/${shopId}/comments`, {
+      method: 'GET',
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+      .then((comments) => {
+        this.setState({ comments })
+      })
+      .catch(error => {
+        console.error({ error })
+      })
+  }
+
+  handlePostComment = e => {
+    e.preventDefault()
+    const shopId = this.props.shopId
+    const text = e.target['text'].value
+    fetch(`${config.API_ENDPOINT}/comments`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        shop_id: shopId,
+        text,
+      }),
+    })
+      .then(res => {
+        if (!res.ok)
+          return res.json().then(e => Promise.reject(e))
+        return res.json()
+      })
+      .then(() => {
+        e.target['text'].value = ''
+      })
+      .then(() => {
+        this.getComments()
+      })
+      .catch(error => {
+        console.error({ error })
+      })
+  }
 
   handleAddComment = e => {
     e.preventDefault()
@@ -12,14 +68,16 @@ export default class Comments extends Component {
   }
 
   render() {
+    const comments = this.state.comments
     return (
       <>
-
         <section className="shop-comments">
           <h3>Comments / Reviews</h3>
-          <form onSubmit={this.handleAddComment}>
-            <textarea 
+          <form onSubmit={this.handlePostComment}>
+            <textarea
               required
+              name='text'
+              id='text'
               maxLength="500"
             />
             <br />
@@ -28,20 +86,13 @@ export default class Comments extends Component {
             >Leave a review</button>
           </form>
           <ul>
-            <li>
-              <p>Boba-user-365:</p>
-              <p>
-                The Kiwi Fruit Tea was my favorite drink in the store. Definitely a must try! Not too sweet and very tasteful.
-              </p>
-              <p>August 15, 2019</p>
-            </li>
-            <li>
-              <p>matcha-lover:</p>
-              <p>
-                The matcha with fresh milk was alright
-              </p>
-              <p> August 30, 2019</p>
-            </li>
+            {comments.map(comment => 
+              <li key={comment.id}>
+                <p>{comment.user.user_name}</p>
+                <p>{comment.text}</p>
+                <p>{moment(comment.date_created).format('MM-DD-YYYY')}</p>
+              </li>
+            )}
           </ul>
         </section>
       </>

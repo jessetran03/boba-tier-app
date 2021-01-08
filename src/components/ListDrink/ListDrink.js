@@ -41,7 +41,7 @@ export default class ListDrink extends Component {
           drinkId={this.props.id}
           ratingId={this.props.ratingId}
           rating={this.props.rating}
-          onGetDrinks={this.props.onGetDrinks}
+          onGetUserDrinks={this.props.onGetUserDrinks}
         />
       </div>
     )

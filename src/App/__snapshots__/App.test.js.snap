@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render App without data 1`] = `
+Array [
+  <nav>
+    <section
+      className="nav-header"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <h2>
+          Boba Tier
+        </h2>
+      </a>
+    </section>
+    <section
+      className="nav-links"
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <p>
+          Home
+        </p>
+      </a>
+      <a
+        aria-current={null}
+        href="/shops"
+        onClick={[Function]}
+      >
+        <p>
+          Shop List
+        </p>
+      </a>
+      <a
+        aria-current={null}
+        href="/rankings"
+        onClick={[Function]}
+      >
+        <p>
+          Rankings
+        </p>
+      </a>
+      <a
+        aria-current={null}
+        href="/shops/2"
+        onClick={[Function]}
+      >
+        <p>
+          Sharetea
+        </p>
+      </a>
+      <select>
+        <option
+          value="Houston"
+        >
+          Houston
+        </option>
+      </select>
+      <a
+        aria-current={null}
+        href="/login"
+        onClick={[Function]}
+      >
+        <p>
+          Log In
+        </p>
+      </a>
+      <a
+        aria-current={null}
+        href="/register"
+        onClick={[Function]}
+      >
+        <p>
+          Sign Up
+        </p>
+      </a>
+    </section>
+  </nav>,
+  <main>
+    <section>
+      <section
+        className="landing"
+      >
+        Rate the best boba tea in town. Pick a city to get started.
+      </section>
+      <ul
+        className="landing-cities"
+      >
+        <li>
+          <a
+            href="/shops"
+            onClick={[Function]}
+          >
+            <button>
+              Houston
+            </button>
+          </a>
+        </li>
+      </ul>
+      <p>
+        More cities to come later!
+      </p>
+    </section>
+  </main>,
+]
+`;

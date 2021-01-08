@@ -6,10 +6,13 @@ import config from '../../config'
 
 export default class Rating extends Component {
   static defaultProps = {
-    rating: null
+    rating: null,
+    drinkId: null,
+    ratingId: null
   }
 
   updateRating = rating => () => {
+    console.log('trying to update rating')
     const { ratingId } = this.props
     const newRating = { rating }
     fetch(`${config.API_ENDPOINT}/ratings/${ratingId}`, {
@@ -26,14 +29,14 @@ export default class Rating extends Component {
         return res.json()
       })
       .then(rating => {
-        this.props.onGetDrinks()
+        this.props.onGetUserDrinks()
       })
       .catch(error => {
         console.error({ error })
       })
   }
 
-  handleRating = rating => () => {
+  postRating = rating => () => {
     const { drinkId } = this.props
     const newRating = {
       rating: rating,
@@ -53,7 +56,7 @@ export default class Rating extends Component {
         return res.json()
       })
       .then(rating => {
-        this.props.onGetDrinks()
+        this.props.onGetUserDrinks()
       })
       .catch(error => {
         console.error({ error })
@@ -91,7 +94,7 @@ export default class Rating extends Component {
       unrated.push(
         <FontAwesomeIcon
           key={i+1}
-          onClick={this.handleRating(i + 1)}
+          onClick={this.postRating(i + 1)}
           className='user-star'
           icon={['far', 'star']}
         />

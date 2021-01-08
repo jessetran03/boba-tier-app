@@ -1,0 +1,36 @@
+.shop-list {
+  margin: 0 250px;
+}
+
+.shop-list ul {
+  list-style-position: inside;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.shop-list h3 {
+  font-size: 30px;
+}
+
+.shop-list h4 {
+  margin: 5px;
+}
+
+.shop-list li {
+  display: flex;
+  margin: 10px;
+  padding: 0;
+  border-style: solid;
+  border-radius: 25px;
+  width: 220px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-list div {
+  padding: 10px;
+}

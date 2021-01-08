@@ -10,15 +10,21 @@ import STORE from '../../STORE'
 export default class Shop extends Component {
   state = {
     listDrinks: STORE.drinks,
-    rankedDrinks: [],
+    rankedDrinks: STORE.rankedDrinks,
     drinks: [],
-    shop: {},
+    shop: STORE.shop,
+    comments: [],
+  }
+  static defaultProps = {
+    match: { params: {} },
   }
 
   componentDidMount() {
     this.getShop()
     this.getRankedDrinks()
-    this.getDrinks()
+    TokenService.hasAuthToken()
+      ? this.getUserDrinks()
+      : this.getDrinks()
   }
 
   getShop = () => {
@@ -57,13 +63,30 @@ export default class Shop extends Component {
       })
   }
 
-  getDrinks = () => {
+  getUserDrinks = () => {
     const { shopId } = this.props.match.params
     return fetch(`${config.API_ENDPOINT}/drinks/shops/${shopId}`, {
       method: 'GET',
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       }
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+      .then((drinks) => {
+        this.setState({ drinks })
+      })
+      .catch(error => {
+        console.error({ error })
+      })
+  }
+
+  getDrinks = () => {
+    return fetch(`${config.API_ENDPOINT}/drinks`, {
+      method: 'GET',
     })
       .then(res =>
         (!res.ok)
@@ -111,6 +134,7 @@ export default class Shop extends Component {
     const rankedDrinks = this.state.rankedDrinks
     const drinks = this.state.drinks
     const shop = this.state.shop
+    const shopId = parseInt(this.props.match.params.shopId)
     return (
       <>
         <h2>{shop.shop_name}</h2>
@@ -118,7 +142,7 @@ export default class Shop extends Component {
 
         <section className="shop-tea-ranking">
           <h3>Top 5 Drinks</h3>
-          {rankedDrinks.length === 0 && 
+          {rankedDrinks.length === 0 &&
             <p><i>Looks like there are no ratings for this store yet. Leave some ratings!</i></p>
           }
           <ol>
@@ -141,13 +165,16 @@ export default class Shop extends Component {
 
         <section className="shop-tea-list">
           <h3>List of drinks:</h3>
-          <h4>Leave your rating!</h4>
-          {drinks.length === 0 && 
+          {TokenService.hasAuthToken() 
+            ? <h4>Leave your rating!</h4>
+            : <p>Please log in to leave a rating</p>}
+          {drinks.length === 0 &&
             <p><i>Looks like no drinks have been added to this store yet. Add some drinks below!</i></p>
           }
           <ul>
             {drinks
-              .sort((a,b) => a.id > b.id ? 1 : -1)
+              .filter(drink => drink.shop_id === shopId)
+              .sort((a, b) => a.id > b.id ? 1 : -1)
               .map(drink =>
                 <li key={drink.id}>
                   <ListDrink
@@ -155,18 +182,18 @@ export default class Shop extends Component {
                     drink={drink.drink_name}
                     ratingId={drink.rating_id}
                     rating={drink.rating}
-                    onGetDrinks={this.getDrinks}
+                    onGetUserDrinks={this.getUserDrinks}
                   />
                 </li>
-            )}
+              )}
           </ul>
           <h5><i>Don't see a drink? Add it below!</i></h5>
           <form onSubmit={this.handleAddDrink}>
-            <input 
+            <input
               type='text'
               id='drink-name-input'
               name='drink-name'
-              required 
+              required
             />
             <button type='submit'>
               Add Drink!
@@ -174,7 +201,7 @@ export default class Shop extends Component {
           </form>
         </section>
 
-        <Comments />
+        <Comments shopId={shopId} />
       </>
     )
   }
