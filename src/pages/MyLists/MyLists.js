@@ -65,6 +65,7 @@ export default class Rankings extends Component {
   }
 
   render() {
+    const shopId = this.state.shop
     const shops = this.state.shops
     const drinks = this.state.drinks
     return (

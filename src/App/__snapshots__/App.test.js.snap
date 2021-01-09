@@ -47,15 +47,6 @@ Array [
           Rankings
         </p>
       </a>
-      <a
-        aria-current={null}
-        href="/shops/2"
-        onClick={[Function]}
-      >
-        <p>
-          Sharetea
-        </p>
-      </a>
       <select>
         <option
           value="Houston"
