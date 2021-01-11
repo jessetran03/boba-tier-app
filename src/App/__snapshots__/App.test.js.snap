@@ -10,94 +10,124 @@ Array [
         href="/"
         onClick={[Function]}
       >
-        <h2>
-          Boba Tier
-        </h2>
+        <img
+          alt="Boba Tier Logo"
+          src="boba-tier-green.png"
+        />
       </a>
     </section>
     <section
       className="nav-links"
     >
-      <a
-        aria-current="page"
-        className="active"
-        href="/"
-        onClick={[Function]}
-        style={Object {}}
+      <section
+        className="desktop-nav"
       >
-        <p>
-          Home
-        </p>
-      </a>
-      <a
-        aria-current={null}
-        href="/shops"
-        onClick={[Function]}
-      >
-        <p>
-          Shop List
-        </p>
-      </a>
-      <a
-        aria-current={null}
-        href="/rankings"
-        onClick={[Function]}
-      >
-        <p>
-          Rankings
-        </p>
-      </a>
-      <select>
-        <option
-          value="Houston"
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
         >
-          Houston
-        </option>
-      </select>
-      <a
-        aria-current={null}
-        href="/login"
-        onClick={[Function]}
-      >
-        <p>
-          Log In
-        </p>
-      </a>
-      <a
-        aria-current={null}
-        href="/register"
-        onClick={[Function]}
-      >
-        <p>
-          Sign Up
-        </p>
-      </a>
+          <p>
+            Home
+          </p>
+        </a>
+        <a
+          aria-current={null}
+          href="/shops"
+          onClick={[Function]}
+        >
+          <p>
+            Shop List
+          </p>
+        </a>
+        <a
+          aria-current={null}
+          href="/rankings"
+          onClick={[Function]}
+        >
+          <p>
+            Top 10
+          </p>
+        </a>
+        <select>
+          <option
+            value="Houston"
+          >
+            Houston, TX
+          </option>
+        </select>
+        <a
+          aria-current={null}
+          href="/login"
+          onClick={[Function]}
+        >
+          <p>
+            Log In
+          </p>
+        </a>
+        <a
+          aria-current={null}
+          href="/register"
+          onClick={[Function]}
+        >
+          <p>
+            Sign Up
+          </p>
+        </a>
+      </section>
+      <section
+        className="mobile-nav"
+      />
     </section>
   </nav>,
   <main>
-    <section>
+    <section
+      className="landing-page"
+    >
       <section
         className="landing"
       >
-        Rate the best boba tea in town. Pick a city to get started.
+        <h2>
+          Rate the Best Boba Tea in Town!
+        </h2>
+        <p
+          className="boba-description"
+        >
+          Boba Tier lets you rate all the drinks in boba shops by city. Along with keeping track of all the drinks you previously rated, you will also be able to see which drinks are the highest rated for that city. You can also leave comments on the shop pages expressing your thoughts about their drinks. Get started by using the navigation pane or click on demo to try it out as a guest!
+        </p>
+        <button
+          className="demo"
+          onClick={[Function]}
+        >
+          Demo
+        </button>
+        <p
+          className="city-notice"
+        >
+          Boba Tier is currently available for shops in Houston, TX. More cities will be added in the future!
+        </p>
       </section>
-      <ul
-        className="landing-cities"
+      <section
+        className="landing-info"
       >
-        <li>
-          <a
-            href="/shops"
-            onClick={[Function]}
-          >
-            <button>
-              Houston
-            </button>
-          </a>
-        </li>
-      </ul>
-      <p>
-        More cities to come later!
-      </p>
+        <img
+          alt="boba drink 2"
+          className="landing-image"
+          src="boba-drink-2.jpg"
+        />
+        <img
+          alt="boba drink 1"
+          className="landing-image"
+          src="boba-drink-1.jpg"
+        />
+        <img
+          alt="boba drink 3"
+          className="landing-image"
+          src="boba-drink-3.jpg"
+        />
+      </section>
     </section>
   </main>,
 ]

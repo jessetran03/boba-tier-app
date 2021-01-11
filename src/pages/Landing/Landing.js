@@ -3,6 +3,7 @@ import drink1 from './boba-drink-1.jpg'
 import drink2 from './boba-drink-2.jpg'
 import drink3 from './boba-drink-3.jpg'
 import config from '../../config'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TokenService from '../../services/token-service'
 
 import './Landing.css'
@@ -10,6 +11,7 @@ import './Landing.css'
 export default class Landing extends Component {
   state = {
     error: null,
+    loading: false,
   }
 
   handleLoginSuccess = () => {
@@ -20,7 +22,10 @@ export default class Landing extends Component {
 
   handleDemo = e => {
     e.preventDefault()
-    this.setState({ error: null })
+    this.setState({ 
+      error: null,
+      loading: true, 
+    })
     const login = {
       user_name: 'Boba Guest',
       password: 'BobaGuest1!',
@@ -38,15 +43,20 @@ export default class Landing extends Component {
         return res.json()
       })
       .then(res => {
+        this.setState({ loading: false })
         TokenService.saveAuthToken(res.authToken)
         this.handleLoginSuccess()
       })
       .catch(res => {
-        this.setState({ error: res.error })
+        this.setState({ 
+          error: res.error ,
+          loading: false,
+        })
       })
   };
 
   renderLoggedOut() {
+    const loading = this.state.loading
     return (
       <section className='landing-page'>
         <section className="landing">
@@ -61,6 +71,9 @@ export default class Landing extends Component {
           <button onClick={this.handleDemo} className='demo'>
             Demo
           </button>
+          <div>
+            {loading && <FontAwesomeIcon className='spinner' icon='spinner' spin />}
+          </div>
           <p className='city-notice'>
             Boba Tier is currently available for shops in Houston, TX. More cities will be added in the future!
           </p>
