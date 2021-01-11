@@ -68,12 +68,12 @@ export default class Login extends Component {
           <label htmlFor='username-input'>
             Username:
           </label>
-          <input type='text' id='username-input' name='username' autoFocus />
+          <input type='text' className='username-input' id='username-input' name='username' autoFocus />
           <br />
           <label htmlFor='password-input' className='password-label'>
             Password:
           </label>
-          <input type='password' id='password-input' name='password' />
+          <input type='password' className='password-input' id='password-input' name='password' />
           <br />
           <button
             type='submit'

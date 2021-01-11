@@ -12,7 +12,6 @@ export default class Rating extends Component {
   }
 
   updateRating = rating => () => {
-    console.log('trying to update rating')
     const { ratingId } = this.props
     const newRating = { rating }
     fetch(`${config.API_ENDPOINT}/ratings/${ratingId}`, {
@@ -42,43 +41,44 @@ export default class Rating extends Component {
       rating: rating,
       drink_id: drinkId,
     }
-    fetch(`${config.API_ENDPOINT}/ratings`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`
-      },
-      body: JSON.stringify(newRating),
-    })
-      .then(res => {
-        if (!res.ok)
-          return res.json().then(e => Promise.reject(e))
-        return res.json()
+    TokenService.hasAuthToken() &&
+      fetch(`${config.API_ENDPOINT}/ratings`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'authorization': `bearer ${TokenService.getAuthToken()}`
+        },
+        body: JSON.stringify(newRating),
       })
-      .then(rating => {
-        this.props.onGetUserDrinks()
-      })
-      .catch(error => {
-        console.error({ error })
-      })
+        .then(res => {
+          if (!res.ok)
+            return res.json().then(e => Promise.reject(e))
+          return res.json()
+        })
+        .then(rating => {
+          this.props.onGetUserDrinks()
+        })
+        .catch(error => {
+          console.error({ error })
+        })
   }
 
   renderRated() {
     const rated = [];
     for (let i = 0; i < this.props.rating; i++) {
       rated.push(
-        <FontAwesomeIcon 
-          key={i+1}
+        <FontAwesomeIcon
+          key={i + 1}
           onClick={this.updateRating(i + 1)}
           className='user-star'
-          icon='star' 
+          icon='star'
         />
       )
     }
     for (let i = this.props.rating; i < 5; i++) {
       rated.push(
         <FontAwesomeIcon
-          key={i+1}
+          key={i + 1}
           onClick={this.updateRating(i + 1)}
           className='user-star'
           icon={['far', 'star']}
@@ -93,7 +93,7 @@ export default class Rating extends Component {
     for (let i = 0; i < 5; i++) {
       unrated.push(
         <FontAwesomeIcon
-          key={i+1}
+          key={i + 1}
           onClick={this.postRating(i + 1)}
           className='user-star'
           icon={['far', 'star']}

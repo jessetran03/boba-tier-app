@@ -1,5 +1,5 @@
-.shop-list {
-  margin: 0 250px;
+.shop-list-page h3 {
+  margin-bottom: 50px;
 }
 
 .shop-list ul {
@@ -11,26 +11,42 @@
   justify-content: space-evenly;
 }
 
-.shop-list h3 {
-  font-size: 30px;
+.shop-list li:hover {
+  background-color: rgb(224, 224, 224);
 }
 
 .shop-list h4 {
-  margin: 5px;
+  font-size: 26px;
+  margin: 10px;
 }
 
 .shop-list li {
   display: flex;
   margin: 10px;
+  background-color: white;
   padding: 0;
-  border-style: solid;
+  border-color: rgb(47, 173, 159);
+  border-width: 6px;
+  border-style: double;
   border-radius: 25px;
   width: 220px;
   height: 150px;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s;
 }
 
-.shop-list div {
-  padding: 10px;
+.shop-list a:hover {
+  color: rgb(52, 204, 186);
+  text-decoration: none;
+}
+
+@media all and (min-width: 600px) {
+  
+}
+
+@media all and (min-width: 1200px) {
+  .shop-list {
+    margin: 0 250px;
+  }
 }

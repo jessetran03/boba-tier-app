@@ -18,7 +18,8 @@ export default class Landing extends Component {
   */
   render() {
     return (
-      <section>
+      <section className='landing-page'>
+        <h2>Welcome!</h2>
         <section className="landing">
           Rate the best boba tea in town. Pick a city to get started.
         </section>

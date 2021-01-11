@@ -1,23 +1,38 @@
-.my-lists {
-  margin: 10px 100px;
-  display: flex;
-  justify-content: space-evenly
+.my-ratings h2 {
+  margin-bottom: 30px;
 }
 
-.my-favorites ol {
+.my-ratings h4 {
+  margin-bottom: 8px;
+}
+
+.my-ratings select {
+  margin: 0 15px;
+}
+
+.my-ratings form {
+  margin-bottom: 40px;
+}
+
+.my-lists {
+  margin: 10px 100px;
+}
+
+.my-lists ol {
   list-style-position: inside;
   margin: 10px;
   padding: 10px;
 }
 
-.my-favorites h4 {
+.my-lists h4 {
   margin: 5px;
 }
 
-.my-favorites li {
+.my-lists li {
   padding: 10px 10px;
   margin: 10px auto;
   border-style: solid;
   border-radius: 25px;
   max-width: 500px;
+  background-color: white;
 }

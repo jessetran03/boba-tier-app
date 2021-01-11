@@ -1,18 +1,46 @@
+.shop-comments {
+  margin-top: 40px;
+}
+
 .shop-comments ul {
   list-style: none;
 }
 
 .shop-comments li {
+  background-color: white;
   border-radius: 20px;
   border-style: solid;
-  max-width: 900px;
-  margin: 10px auto;
+  width: 71.5%;
+  padding: 15px;
+  margin: 12px auto;
+}
+
+.user {
+  font-size: 16px;
+  color: rgb(122, 122, 122);
+  margin-right: 10px;
+}
+
+.shop-comments li h4 {
+  font-size: 20px;
+  margin: 3px 20px 3px 0;
+}
+
+.shop-comments li h5 {
+  font-weight: 500;
+  color: rgb(145, 145, 145);
+  margin-bottom: 12px;
+}
+
+.shop-comments p {
+  margin: 10px;
 }
 
 .shop-comments textarea {
   font-size: 18px;
   font-family: sans-serif;
-  width: 700px;
+  width: 71.5%;
   height: 200px;
   padding: 20px;
+  margin: 20px 0;
 }

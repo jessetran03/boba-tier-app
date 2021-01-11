@@ -9,8 +9,3 @@
   padding: 10px;
   border-radius: 20px;
 }
-
-.landing-cities button:hover {
-  cursor: pointer;
-  background-color: #CCCCCC;
-}

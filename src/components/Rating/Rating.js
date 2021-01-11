@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import './Rating.css'
+import './Rating.css'
 
 export default class Rating extends Component {
   static defaultProps = {

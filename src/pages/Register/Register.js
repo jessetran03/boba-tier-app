@@ -58,7 +58,7 @@ export default class Register extends Component {
           <label htmlFor='first-name-input'>
             First Name:
           </label>
-          <input type='text' id='first-name-input' name='first-name' />
+          <input type='text' id='first-name-input' name='first-name' autoFocus />
           <br />
           <label htmlFor='last-name-input'>
             Last Name:

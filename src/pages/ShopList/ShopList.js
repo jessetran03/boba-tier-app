@@ -33,7 +33,7 @@ export default class ShopList extends Component {
   render() {
     const shops = this.state.shops
     return (
-      <>
+      <section className='shop-list-page'>
         <h2>List of Boba Tea Spots</h2>
         <section className="shop-list">
           <h3>Houston, TX</h3>
@@ -41,17 +41,15 @@ export default class ShopList extends Component {
             {shops
               .sort((a, b) => a.id > b.id ? 1 : -1)
               .map(shop =>
-                <li key={shop.id}>
-                    <Link to={`/shops/${shop.id}`}>
-                      <div className='list-shop'>
-                        <h3>{shop.shop_name}</h3>
-                      </div>
-                    </Link>
-                </li>
+                <Link to={`/shops/${shop.id}`} key={shop.id}>
+                  <li key={shop.id}>
+                    <h4>{shop.shop_name}</h4>
+                  </li>
+                </Link>
               )}
           </ul>
         </section>
-      </>
+      </section>
     )
   }
 }

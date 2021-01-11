@@ -2,19 +2,29 @@ nav {
   display: flex;
   padding: 0.5% 0;
   margin-bottom: 20px;
-  background-color: #BBBBBB;
-  box-shadow: 0 5px 5px #777777;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 3px #c7c7c7;
   justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-nav p, nav select {
-  display: inline;
-  margin-right: 20px;
+nav p {
+  font-size: 17.5px;
 }
 
 nav select {
   padding: 5px;
   border-radius: 20px;
+  width: 130px;
+}
+
+.nav-header img {
+  max-width: 150px;
+  height: auto;
+  margin: 20px;
 }
 
 .nav-header, .nav-links {
@@ -22,15 +32,41 @@ nav select {
 }
 
 .active p {
-  color: #000000;
+  color: rgb(47, 173, 159);
+}
+
+.bars {
+  margin: 0 20px;
+  font-size: 45px;
+}
+
+.bars:hover {
+  cursor: pointer;
+}
+
+.desktop-nav {
+  display: none;
 }
 
 @media all and (min-width: 1200px) {
+  .mobile-nav {
+    display: none;
+  }
+
   .nav-header {
-    margin-left: 200px;
+    margin-left: 14%;
   }
 
   .nav-links {
-    margin-right: 200px;
+    margin-right: 14%;
+  }
+
+  .desktop-nav {
+    display: flex;
+  }
+
+  .desktop-nav p, .desktop-nav select {
+    display: inline;
+    margin-right: 30px;
   }
 }

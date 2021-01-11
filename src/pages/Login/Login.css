@@ -1,25 +1,21 @@
 .login label {
+  font-size: 22px;
   margin-right: 10px;
 }
 
-.login input {
-  margin: 2px;
-  padding: 4px;
+.username-input, .password-input {
+  font-size: 20px;
+  padding: 4px 12px;
   border-radius: 15px;
-  width: 200px;
+  width: 250px;
+}
+
+.username-input {
+  margin: 30px 5px 8px 0;
 }
 
 .login button {
   margin: 20px 5px;
-  font-size: 15px;
-  font-weight: 500;
-  border-radius: 15px;
-  padding: 6px;
-}
-
-.login button:hover {
-  cursor: pointer;
-  background-color: #CCCCCC;
 }
 
 .spinner {

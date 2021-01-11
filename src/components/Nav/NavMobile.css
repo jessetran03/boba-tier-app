@@ -1,0 +1,36 @@
+.mobile-nav-links {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  top: 84px;
+  left: 0px;
+  background-color: rgb(47, 173, 159, 0.97);
+}
+
+.mobile-nav-links p {
+  padding: 20px 0;
+  font-size: 30px;
+  font-weight: 600;
+  transition: color 0.2s ease-out, background-color 0.2s ease-in-out;
+}
+
+.mobile-nav-links p:hover {
+  background-color: rgb(47, 173, 159, 0.97);
+  color: white;
+}
+
+.mobile-nav-links .active p {
+  color: white;
+  background-color: rgb(83, 83, 83);
+  font-weight: 600;
+}
+
+.mobile-nav-links .active p:hover {
+  background-color: rgb(83, 83, 83);
+}
+
+.mobile-nav-links hr {
+  margin: 0 100px;
+  border: 1px solid rgb(216, 216, 216);
+}

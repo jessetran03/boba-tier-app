@@ -1,39 +1,76 @@
+.shop-page {
+  margin: 150px 0 150px 0;
+}
+
+.shop-page h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.shop-tea-ranking h3 {
+  margin: 25px 0 25px 0;
+}
+
+.shop-page h4 {
+  margin-bottom: 35px;
+}
+
+.shop-tea-ranking {
+  margin: 10px 14%;
+}
+
 .shop-tea-ranking ol {
   list-style-position: inside;
-  padding: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .shop-tea-ranking li {
+  flex: 1;
   padding: 15px 10px;
-  margin: 10px auto;
+  margin: 10px 10px;
   border-style: solid;
   border-radius: 25px;
-  max-width: 300px;
+  background-color: white;
+}
+
+.shop-tea-ranking span {
+  font-weight: 600;
+}
+
+.average-rating {
+  font-size: 18px;
+  color: rgb(87, 87, 87);
+  margin-top: 10px;
+}
+
+.shop-drinks-rating {
+  margin: 5px 0 3px 0;
+}
+
+.rating-count {
+  font-size: 18px;
+}
+
+.shop-tea-list {
+  margin: 30px 13%;
 }
 
 .shop-tea-list ul {
   list-style: none;
+  min-height: 300px;
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .shop-tea-list li {
-  max-width: 300px;
-  margin: 10px auto;
-}
-
-.shop-tea-list div {
-  border-style: solid;
-  border-radius: 25px;
-  padding: 5px 10px;
-}
-
-.shop-tea-list .open:hover {
-  cursor: pointer;
-}
-
-.shop-tea-list h4 {
-  margin: 0;
-  padding: 0;
+  flex: 1px;
+  min-width: 300px;
+  margin: 10px;
 }
 
 .shop-tea-list input {
@@ -42,3 +79,31 @@
   border-style: solid;
   border-radius: 25px;
 }
+
+.add-drink {
+  margin-top: 10px;
+}
+
+.add-drink input {
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-right: 15px;
+  width: 400px;
+}
+
+@media all and (min-width: 800px) {
+  .shop-tea-ranking ol {
+    list-style-position: inside;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .shop-tea-ranking li {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+

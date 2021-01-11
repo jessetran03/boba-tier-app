@@ -1,13 +1,24 @@
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: sans-serif;
   font-size: 20px;
-  color: #444444;
   text-align: center;
   min-width: 300px;
+  background-color: rgb(255, 248, 239);
+}
+
+main {
+  margin: 150px 0 100px 0;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 5px;
 }
 
 select {
@@ -23,14 +34,17 @@ select:hover {
 
 button {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
+  color: white;
   border-radius: 15px;
   padding: 6px;
+  background-color:rgb(52, 204, 186);
+  transition: background-color 0.15s ease-in-out;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #CCCCCC;
+  background-color: rgb(68, 235, 215);
 }
 
 ul {
@@ -39,18 +53,19 @@ ul {
 }
 
 a:link {
-  color: #555555;
+  color: black;
   text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 a:visited {
-  color: #555555;
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
-  color: #000000;
-  text-decoration: underline;
+  color: rgb(52, 204, 186);
+  text-decoration: none;
 }
 
 a:active {

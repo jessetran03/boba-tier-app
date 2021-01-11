@@ -65,12 +65,11 @@ export default class Rankings extends Component {
   }
 
   render() {
-    const shopId = this.state.shop
     const shops = this.state.shops
     const drinks = this.state.drinks
     return (
-      <>
-        <h2>My Lists</h2>
+      <section className='my-ratings'>
+        <h2>My Rated Drinks</h2>
         <form onSubmit={this.handleFilter}>
           <h4>Filter by store:</h4>
           <select onChange={this.onChange}>
@@ -81,9 +80,8 @@ export default class Rankings extends Component {
           </select>
           <button type='submit'>Apply Filter</button>
         </form>
-        <section className="my-lists">
-          <section className="my-favorites">
-            <h3>My Rated Drinks</h3>
+          <section className="my-lists">
+            <h4>{this.state.currentShop}</h4>
             <ul>
               {drinks.length === 0 &&
                 <p>You have not rated any drinks for this shop</p>
@@ -97,9 +95,7 @@ export default class Rankings extends Component {
               )}
             </ul>
           </section>
-
-        </section>
-      </>
+      </section>
     )
   }
 }

@@ -1,0 +1,21 @@
+.star-rated {
+  font-size: 25px;
+  color: white;
+  border-color: rgb(47, 173, 159);
+  border-style: solid;
+  background-color: rgb(47, 173, 159);
+  border-radius: 5px;
+  padding: 1px 0 2px 0;
+  margin: 1px 1px 0 1px;
+}
+
+.star-unrated {
+  font-size: 25px;
+  color: white;
+  border-color: #CCCCCC;
+  border-style: solid;
+  background-color: #CCCCCC;
+  border-radius: 5px;
+  padding: 1px 0 2px 0;
+  margin: 1px 1px 0 1px;
+}

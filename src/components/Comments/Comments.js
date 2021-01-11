@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Comments.css'
 import config from '../../config'
 import TokenService from '../../services/token-service'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import moment from 'moment';
 
 export default class Comments extends Component {
@@ -62,40 +63,37 @@ export default class Comments extends Component {
       })
   }
 
-  handleAddComment = e => {
-    e.preventDefault()
-    console.log('Successfully posted comment')
-  }
-
   render() {
     const comments = this.state.comments
     return (
-      <>
-        <section className="shop-comments">
-          <h3>Comments / Reviews</h3>
-          <form onSubmit={this.handlePostComment}>
-            <textarea
-              required
-              name='text'
-              id='text'
-              maxLength="500"
-            />
-            <br />
-            <button
-              type='submit'
-            >Leave a review</button>
-          </form>
-          <ul>
-            {comments.map(comment => 
-              <li key={comment.id}>
-                <p>{comment.user.user_name}</p>
-                <p>{comment.text}</p>
-                <p>{moment(comment.date_created).format('MM-DD-YYYY')}</p>
-              </li>
-            )}
-          </ul>
-        </section>
-      </>
+      <section className="shop-comments">
+        <h3>Comments</h3>
+        <ul className='shop-comment-list'>
+          {comments.map(comment =>
+            <li key={comment.id}>
+              <h4>
+                <FontAwesomeIcon className='user' icon='user' />
+                {comment.user.user_name}
+              </h4>
+              <h5>{moment(comment.date_created).format("dddd, MMMM Do, YYYY")}</h5>
+              <p>{comment.text}</p>
+            </li>
+          )}
+        </ul>
+        <form onSubmit={this.handlePostComment}>
+          <textarea
+            required
+            name='text'
+            id='text'
+            placeholder='Write a comment here'
+            maxLength="500"
+          />
+          <br />
+          <button type='submit'>
+            Post Comment
+            </button>
+        </form>
+      </section>
     )
   }
 }

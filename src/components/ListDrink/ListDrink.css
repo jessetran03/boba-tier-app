@@ -1,41 +1,54 @@
-.heart {
-  color: #777777;
+.shop-tea-list li {
+  background-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+
+.drink-tab {
   cursor: pointer;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-list-drink-name {
+  margin: 3px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.angle {
+  margin: 0 15px;
+  font-size: 28px;
+}
+
+.drink-tab img {
+  max-width: 20px;
+  margin: 0 15px;
+}
+
+.check {
+  margin: 10px;
+  font-size: 20px;
+  color: rgb(45, 121, 111);
+}
+
+.user-rating {
+  margin-bottom: 5px;
+  font-size: 25px;
 }
 
 .user-star {
-  color:#777777;
+  margin: 3px;
+  color: rgb(53, 143, 131);
   cursor: pointer;
-}
-
-.heart:hover {
-  color: #222222;
-  cursor: pointer;
+  transition: color 0.2s;
 }
 
 .user-star:hover {
-  color:#111111;
+  color: rgb(121, 233, 218);
   cursor: pointer;
-}
-
-.star-rated {
-  font-size: 25px;
-  color: white;
-  border-color: #777777;
-  border-style: solid;
-  background-color: #777777;
-  border-radius: 5px;
-  padding: 1px 0 2px 0;
-  margin: 1px 1px 0 1px;
-}
-
-.star-unrated {
-  font-size: 25px;
-  color: white;
-  border-color: #CCCCCC;
-  border-style: solid;
-  background-color: #CCCCCC;
-  border-radius: 5px;
-  padding: 1px 0 2px 0;
-  margin: 1px 1px 0 1px;
 }

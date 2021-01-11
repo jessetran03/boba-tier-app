@@ -136,9 +136,9 @@ export default class Shop extends Component {
     const shop = this.state.shop
     const shopId = parseInt(this.props.match.params.shopId)
     return (
-      <>
+      <section className='shop-page'>
         <h2>{shop.shop_name}</h2>
-        <h4><i>{shop.city}</i></h4>
+        <h4><i>{shop.city}, {shop.state}</i></h4>
 
         <section className="shop-tea-ranking">
           <h3>Top 5 Drinks</h3>
@@ -150,13 +150,12 @@ export default class Shop extends Component {
               .slice(0, 5)
               .map(drink =>
                 <li key={drink.id}>
-                  {drink.drink_name}
-                  <br /><br />
-                  <Rating rating={Math.round(drink.average_rating)} />
-                  <br />
-                  ({drink.rating_count} Ratings)
-                  <br />
-                  Rating: {parseFloat(drink.average_rating).toFixed(2)}
+                  <span>{drink.drink_name}</span>
+                  <p className='average-rating'>Average Rating: {parseFloat(drink.average_rating).toFixed(2)}</p>
+                  <div className='shop-drinks-rating'>
+                    <Rating rating={Math.round(drink.average_rating)} />
+                  </div>
+                  <p className='rating-count'>({drink.rating_count} Ratings)</p>
                 </li>
               )
             }
@@ -164,9 +163,9 @@ export default class Shop extends Component {
         </section>
 
         <section className="shop-tea-list">
-          <h3>List of drinks:</h3>
-          {TokenService.hasAuthToken() 
-            ? <h4>Leave your rating!</h4>
+          <h3>Drink List</h3>
+          {TokenService.hasAuthToken()
+            ? <h5>Leave your rating below!</h5>
             : <p>Please log in to leave a rating</p>}
           {drinks.length === 0 &&
             <p><i>Looks like no drinks have been added to this store yet. Add some drinks below!</i></p>
@@ -176,23 +175,23 @@ export default class Shop extends Component {
               .filter(drink => drink.shop_id === shopId)
               .sort((a, b) => a.id > b.id ? 1 : -1)
               .map(drink =>
-                <li key={drink.id}>
-                  <ListDrink
-                    id={drink.id}
-                    drink={drink.drink_name}
-                    ratingId={drink.rating_id}
-                    rating={drink.rating}
-                    onGetUserDrinks={this.getUserDrinks}
-                  />
-                </li>
+                <ListDrink
+                  key={drink.id}
+                  id={drink.id}
+                  drink={drink.drink_name}
+                  ratingId={drink.rating_id}
+                  rating={drink.rating}
+                  onGetUserDrinks={this.getUserDrinks}
+                />
               )}
           </ul>
-          <h5><i>Don't see a drink? Add it below!</i></h5>
-          <form onSubmit={this.handleAddDrink}>
+          <form className='add-drink' onSubmit={this.handleAddDrink}>
+            <h5><i>Don't see a drink? Add it below!</i></h5>
             <input
               type='text'
               id='drink-name-input'
               name='drink-name'
+              placeholder='Name of drink'
               required
             />
             <button type='submit'>
@@ -202,7 +201,8 @@ export default class Shop extends Component {
         </section>
 
         <Comments shopId={shopId} />
-      </>
+
+      </section>
     )
   }
 }
