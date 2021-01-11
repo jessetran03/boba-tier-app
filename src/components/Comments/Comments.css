@@ -2,6 +2,10 @@
   margin-top: 40px;
 }
 
+.shop-comments h3 {
+  margin-bottom: 40px;
+}
+
 .shop-comments ul {
   list-style: none;
 }
@@ -11,6 +15,7 @@
   border-radius: 20px;
   border-style: solid;
   width: 71.5%;
+  max-width: 1000px;
   padding: 15px;
   margin: 12px auto;
 }
@@ -40,6 +45,7 @@
   font-size: 18px;
   font-family: sans-serif;
   width: 71.5%;
+  max-width: 1000px;
   height: 200px;
   padding: 20px;
   margin: 20px 0;

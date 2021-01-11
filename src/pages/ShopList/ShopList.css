@@ -1,3 +1,8 @@
+.shop-list-page h2 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .shop-list-page h3 {
   margin-bottom: 50px;
 }
@@ -22,14 +27,14 @@
 
 .shop-list li {
   display: flex;
-  margin: 10px;
+  margin: 8px;
   background-color: white;
   padding: 0;
   border-color: rgb(47, 173, 159);
   border-width: 6px;
   border-style: double;
   border-radius: 25px;
-  width: 220px;
+  width: 190px;
   height: 150px;
   align-items: center;
   justify-content: center;
@@ -42,7 +47,10 @@
 }
 
 @media all and (min-width: 600px) {
-  
+  .shop-list li {
+    width: 225px;
+    margin: 16px;
+  }
 }
 
 @media all and (min-width: 1200px) {

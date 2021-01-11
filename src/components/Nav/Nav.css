@@ -16,7 +16,7 @@ nav p {
 }
 
 nav select {
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 20px;
   width: 130px;
 }
@@ -33,6 +33,17 @@ nav select {
 
 .active p {
   color: rgb(47, 173, 159);
+}
+
+.sign-up-link {
+  font-weight: 700;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: rgb(52, 204, 186);
+  color: white;
 }
 
 .bars {

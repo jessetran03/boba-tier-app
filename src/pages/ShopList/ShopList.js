@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './ShopList.css'
-// import Rating from '../../components/Rating/Rating'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import config from '../../config'
 
 export default class ShopList extends Component {
   state = {
     shops: [],
+    loading: false,
   }
 
   componentDidMount() {
@@ -14,7 +15,8 @@ export default class ShopList extends Component {
   }
 
   getShops = () => {
-    return fetch(`${config.API_ENDPOINT}/shops`, {
+    this.setState({ loading: true })
+    fetch(`${config.API_ENDPOINT}/shops`, {
       method: 'GET',
     })
       .then(res =>
@@ -23,18 +25,22 @@ export default class ShopList extends Component {
           : res.json()
       )
       .then((shops) => {
-        this.setState({ shops })
+        this.setState({ 
+          shops,
+          loading: false
+        })
       })
       .catch(error => {
         console.error({ error })
+        this.setState({ loading: false })
       })
   }
 
   render() {
-    const shops = this.state.shops
+    const { shops, loading } = this.state
     return (
       <section className='shop-list-page'>
-        <h2>List of Boba Tea Spots</h2>
+        <h2>List of Boba Tea Shops</h2>
         <section className="shop-list">
           <h3>Houston, TX</h3>
           <ul>
@@ -49,6 +55,9 @@ export default class ShopList extends Component {
               )}
           </ul>
         </section>
+        <div>
+          {loading && <FontAwesomeIcon className='spinner' icon='spinner' spin />}
+        </div>
       </section>
     )
   }

@@ -47,7 +47,7 @@ export default class NavMobile extends Component {
           </NavLink>
           <hr />
           <NavLink to='/lists' onClick={this.handleNavClick} activeClassName='active'>
-            <p>My Ratings</p>
+            <p>My Rated Drinks</p>
           </NavLink>
           <hr />
           <Link onClick={this.handleLogoutClick} to='/' >

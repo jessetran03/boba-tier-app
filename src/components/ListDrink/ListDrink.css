@@ -30,12 +30,6 @@
   margin: 0 15px;
 }
 
-.check {
-  margin: 10px;
-  font-size: 20px;
-  color: rgb(45, 121, 111);
-}
-
 .user-rating {
   margin-bottom: 5px;
   font-size: 25px;
@@ -43,7 +37,7 @@
 
 .user-star {
   margin: 3px;
-  color: rgb(53, 143, 131);
+  color: rgb(52, 204, 186);
   cursor: pointer;
   transition: color 0.2s;
 }

@@ -86,13 +86,15 @@ export default class Rankings extends Component {
               {drinks.length === 0 &&
                 <p>You have not rated any drinks for this shop</p>
               }
-              {drinks.map(drink =>
-                <li key={drink.id}>
-                  <h4>{drink.drink_name}</h4>
-                  <Rating rating={drink.rating} />
-                  <p><i>{drink.shop_name}</i></p>
-                </li>
-              )}
+              {drinks
+                .sort((a, b) => a.rating < b.rating ? 1 : -1 || a.id < b.id ? 1 : -1)
+                .map(drink =>
+                  <li key={drink.id}>
+                    <h4>{drink.drink_name}</h4>
+                    <Rating rating={drink.rating} />
+                    <p><i>{drink.shop_name}</i></p>
+                  </li>
+                )}
             </ul>
           </section>
       </section>

@@ -1,5 +1,10 @@
 .rankings-page {
-  margin: 150px 0;
+  margin: 150px 10px;
+}
+
+.rankings-page h2 {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .rankings-page h3 {
@@ -8,7 +13,7 @@
 
 .boba-tea-ranking ol {
   list-style-type: none;
-  margin: 0px;
+  margin: 10px;
   padding: 0px;
   display: flex;
   flex-wrap: wrap;
@@ -18,7 +23,7 @@
 
 .boba-tea-ranking li {
   padding: 10px 10px;
-  margin: 10px;
+  margin: 10px 10px;
   border-style: solid;
   border-radius: 25px;
   max-width: 540px;
@@ -85,13 +90,13 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .rank-item-number {
     font-size: 40px;
   }
 }
 
-@media all and (min-width: 1584px) {
+@media all and (min-width: 1632px) {
   .boba-tea-ranking li {
     min-height: 295px;
     max-width: 31.7%;

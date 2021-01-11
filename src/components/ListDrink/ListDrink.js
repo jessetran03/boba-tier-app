@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import UserRating from '../UserRating/UserRating'
 import './ListDrink.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logo from './boba.png'
+import logo from './blue-boba.png'
 
 export default class ListDrink extends Component {
   state = {

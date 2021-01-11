@@ -163,10 +163,10 @@ export default class Shop extends Component {
         </section>
 
         <section className="shop-tea-list">
-          <h3>Drink List</h3>
-          {TokenService.hasAuthToken()
-            ? <h5>Leave your rating below!</h5>
-            : <p>Please log in to leave a rating</p>}
+          <h3>List of Drinks</h3>
+            {TokenService.hasAuthToken()
+              ? <h5 className='list-notice'>Leave your rating below!</h5>
+              : <p className='list-notice'>Please log in to leave a rating</p>}
           {drinks.length === 0 &&
             <p><i>Looks like no drinks have been added to this store yet. Add some drinks below!</i></p>
           }

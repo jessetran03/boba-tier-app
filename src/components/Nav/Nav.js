@@ -29,20 +29,17 @@ export default class Nav extends Component {
           <NavLink exact to='/' activeClassName='active'>
             <p>Home</p>
           </NavLink>
-          <NavLink to='/lists' activeClassName='active'>
-            <p>My Ratings</p>
-          </NavLink>
           <NavLink to='/shops' activeClassName='active'>
             <p>Shop List</p>
           </NavLink>
           <NavLink to='/rankings' activeClassName='active'>
             <p>Top 10</p>
           </NavLink>
+          <NavLink to='/lists' activeClassName='active'>
+            <p>My Ratings</p>
+          </NavLink>
           <select>
-            <option value='Houston'>Houston</option>
-            <option value='Austin'>Austin</option>
-            <option value='Dallas'>Dallas</option>
-            <option value='San Francisco'>San Francisco</option>
+            <option value='Houston'>Houston, TX</option>
           </select>
           <Link onClick={this.handleLogoutClick} to='/'>
             <p>Log Out</p>
@@ -69,7 +66,7 @@ export default class Nav extends Component {
             <p>Top 10</p>
           </NavLink>
           <select>
-            <option value='Houston'>Houston</option>
+            <option value='Houston'>Houston, TX</option>
           </select>
           <NavLink to='/login' activeClassName='active'>
             <p>Log In</p>

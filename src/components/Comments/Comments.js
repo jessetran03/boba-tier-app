@@ -68,16 +68,21 @@ export default class Comments extends Component {
     return (
       <section className="shop-comments">
         <h3>Comments</h3>
+        {comments.length === 0 &&
+          <p><i>Be the first to comment!</i></p>
+        }
         <ul className='shop-comment-list'>
-          {comments.map(comment =>
-            <li key={comment.id}>
-              <h4>
-                <FontAwesomeIcon className='user' icon='user' />
-                {comment.user.user_name}
-              </h4>
-              <h5>{moment(comment.date_created).format("dddd, MMMM Do, YYYY")}</h5>
-              <p>{comment.text}</p>
-            </li>
+          {comments
+            .sort((a, b) => a.date_created < b.date_created ? 1 : -1 )
+            .map(comment =>
+              <li key={comment.id}>
+                <h4>
+                  <FontAwesomeIcon className='user' icon='user' />
+                  {comment.user.user_name}
+                </h4>
+                <h5>{moment(comment.date_created).format("dddd, MMMM Do, YYYY")}</h5>
+                <p>{comment.text}</p>
+              </li>
           )}
         </ul>
         <form onSubmit={this.handlePostComment}>
