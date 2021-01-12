@@ -15,11 +15,11 @@ body {
 }
 
 main {
-  margin: 150px 0 100px 0;
+  margin: 100px 0 100px 0;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 5px;
   font-weight: 600;
 }
@@ -74,4 +74,13 @@ a:hover {
 a:active {
   color: #EEEEEE;
   text-decoration: underline;
+}
+
+@media all and (min-width: 600px) {
+  h2 {
+    font-size: 40px;
+  }
+  main {
+    margin: 150px 0 100px 0;
+  }
 }

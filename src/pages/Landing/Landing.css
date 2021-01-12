@@ -2,6 +2,7 @@
   background-color: rgb(209, 226, 224);
   padding: 60px 14.5%;
   margin-bottom: 50px;
+  margin-top: 150px;
 }
 
 .boba-description {
@@ -41,5 +42,9 @@
 @media all and (min-width: 1200px) {
   .landing {
     padding: 60px 25%;
+  }
+
+  .city-notice {
+    text-align: center;
   }
 }

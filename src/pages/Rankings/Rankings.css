@@ -1,5 +1,6 @@
 .rankings-page {
-  margin: 150px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .rankings-page h2 {
@@ -35,7 +36,7 @@
 
 .rank-item-number {
   font-weight: 600;
-  flex: 1;
+  flex: 4;
   padding: 10px;
   margin: 0;
   font-size: 40px;
@@ -43,7 +44,7 @@
 
 .rank-item-info {
   margin: 10px;
-  flex: 3;
+  flex: 15;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -63,7 +64,8 @@
 .rank-item-info div {
   margin-bottom: 10px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .rank-item-rating {
@@ -100,6 +102,20 @@
   .boba-tea-ranking li {
     min-height: 295px;
     max-width: 31.7%;
+  }
+  .rank-item-number {
+    flex: 1;
+  }
+  
+  .rank-item-info {
+    flex: 3;
+  }
+
+  .rank-item-info div {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
 }
