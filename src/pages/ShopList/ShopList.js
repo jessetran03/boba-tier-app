@@ -41,7 +41,7 @@ export default class ShopList extends Component {
     return (
       <section className='shop-list-page'>
         <h2>List of Boba Tea Shops</h2>
-        <section className="shop-list">
+        <section className='shop-list'>
           <h3>Houston, TX</h3>
           <ul>
             {shops

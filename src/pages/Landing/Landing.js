@@ -59,7 +59,7 @@ export default class Landing extends Component {
     const loading = this.state.loading
     return (
       <section className='landing-page'>
-        <section className="landing">
+        <section className='landing'>
           <h2>Rate the Best Boba Tea in Town!</h2>
           <p className='boba-description'>
             Boba Tier lets you rate all the drinks in boba shops by city.
@@ -90,7 +90,7 @@ export default class Landing extends Component {
   renderLoggedIn() {
     return (
       <section className='landing-page'>
-        <section className="landing">
+        <section className='landing'>
           <h2>Rate the Best Boba Tea in Town!</h2>
           <p className='boba-description'>
             Boba Tier lets you rate all the drinks in boba shops by city.

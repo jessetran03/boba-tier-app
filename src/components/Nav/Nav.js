@@ -87,7 +87,7 @@ export default class Nav extends Component {
         <nav>
           <section className='nav-header'>
             <Link to='/'>
-              <img src={logo} alt="Boba Tier Logo" />
+              <img src={logo} alt='Boba Tier Logo' />
             </Link>
           </section>
           <section className='nav-links'>

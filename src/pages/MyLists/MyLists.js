@@ -79,7 +79,7 @@ export default class Rankings extends Component {
           </select>
           <button type='submit'>Apply Filter</button>
         </form>
-          <section className="my-lists">
+          <section className='my-lists'>
             <h4>{this.state.currentShop}</h4>
             <ul>
               {drinks.length === 0 &&

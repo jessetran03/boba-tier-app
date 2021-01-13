@@ -41,7 +41,7 @@ export default class Rankings extends Component {
     return (
       <section className='rankings-page'>
         <h2>Top 10 Rated Drinks</h2>
-        <section className="boba-tea-ranking">
+        <section className='boba-tea-ranking'>
           <h3>Houston, TX</h3>
           <ol>
             {drinks

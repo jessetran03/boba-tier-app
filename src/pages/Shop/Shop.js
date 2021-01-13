@@ -140,7 +140,7 @@ export default class Shop extends Component {
         <h2>{shop.shop_name}</h2>
         <h4><i>{shop.city}, {shop.state}</i></h4>
 
-        <section className="shop-tea-ranking">
+        <section className='shop-tea-ranking'>
           <h3>Top 5 Drinks</h3>
           {rankedDrinks.length === 0 &&
             <p><i>Looks like there are no ratings for this store yet. Leave some ratings!</i></p>
