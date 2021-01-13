@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
-import logo from './boba-tier-green.png'
+import logo from '../../images/boba-tier-logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavMobile from './NavMobile'
-// import config from '../config'
 import './Nav.css'
 
 export default class Nav extends Component {

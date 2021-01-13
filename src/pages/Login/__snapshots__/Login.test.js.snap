@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Login without data 1`] = `
+<section
+  className="login"
+>
+  <form
+    className="sign-form"
+    onSubmit={[Function]}
+  >
+    <h2>
+      Sign in
+    </h2>
+    <div />
+    <label
+      htmlFor="username-input"
+    >
+      Username:
+    </label>
+    <input
+      autoFocus={true}
+      className="username-input"
+      id="username-input"
+      name="username"
+      type="text"
+    />
+    <br />
+    <label
+      className="password-label"
+      htmlFor="password-input"
+    >
+      Password:
+    </label>
+    <input
+      className="password-input"
+      id="password-input"
+      name="password"
+      type="password"
+    />
+    <br />
+    <button
+      type="submit"
+    >
+      Log in
+    </button>
+    <a
+      href="/register"
+      onClick={[Function]}
+    >
+      <button
+        className="sign-up-button"
+      >
+        Sign up
+      </button>
+    </a>
+  </form>
+  <div />
+</section>
+`;

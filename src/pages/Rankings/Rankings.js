@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './Rankings.css'
-// import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Rating from '../../components/Rating/Rating'
 import config from '../../config'

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render MyLists without data 1`] = `
+<section
+  className="my-ratings"
+>
+  <h2>
+    My Rated Drinks
+  </h2>
+  <form
+    onSubmit={[Function]}
+  >
+    <h4>
+      Filter by store:
+    </h4>
+    <select
+      onChange={[Function]}
+    >
+      <option
+        value="all"
+      >
+        All
+      </option>
+    </select>
+    <button
+      type="submit"
+    >
+      Apply Filter
+    </button>
+  </form>
+  <section
+    className="my-lists"
+  >
+    <h4 />
+    <ul>
+      <p>
+        You have not rated any drinks for this shop
+      </p>
+    </ul>
+  </section>
+</section>
+`;

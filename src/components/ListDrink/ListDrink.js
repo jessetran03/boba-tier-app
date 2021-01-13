@@ -2,11 +2,18 @@ import React, { Component } from 'react'
 import UserRating from '../UserRating/UserRating'
 import './ListDrink.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import logo from './blue-boba.png'
+import logo from '../../images/blue-boba.png'
+import PropTypes from 'prop-types'
 
 export default class ListDrink extends Component {
   state = {
     open: false
+  }
+  static propTypes = {
+    id: PropTypes.number,
+    ratingId: PropTypes.number,
+    rating: PropTypes.number,
+    onGetUserDrinks: PropTypes.func,
   }
 
   handleClickOpen = () => {
@@ -26,9 +33,8 @@ export default class ListDrink extends Component {
             {this.props.drink}
           </div>
           {this.props.rating
-           // ? <FontAwesomeIcon className='check' icon='check' />
             ? <img src={logo} alt='boba tier logo' />
-            : <div className='check'>&nbsp;</div>
+            : <div>&nbsp;</div>
           }
         </div>
       </li>
@@ -46,9 +52,8 @@ export default class ListDrink extends Component {
             {this.props.drink}
           </div>
           {this.props.rating
-            //? <FontAwesomeIcon className='check' icon='check' />
             ? <img src={logo} alt='boba tier logo' />
-            : <div className='check'>&nbsp;</div>
+            : <div>&nbsp;</div>
           }
         </div>
         <div className='user-rating'>

@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TokenService from '../../services/token-service'
 import config from '../../config'
-// import './Rating.css'
+import PropTypes from 'prop-types'
 
 export default class Rating extends Component {
-  static defaultProps = {
-    rating: null,
-    drinkId: null,
-    ratingId: null
+  static propTypes = {
+    onGetUserDrinks: PropTypes.func,
+    rating: PropTypes.number,
+    drinkId: PropTypes.number,
+    ratingId: PropTypes.number,
   }
 
   updateRating = rating => () => {

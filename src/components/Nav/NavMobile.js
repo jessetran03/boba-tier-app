@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import config from '../config'
 import './NavMobile.css'
 
 export default class NavMobile extends Component {

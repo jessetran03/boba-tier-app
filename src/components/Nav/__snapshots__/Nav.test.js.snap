@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Nav without data 1`] = `
+<nav>
+  <section
+    className="nav-header"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="Boba Tier Logo"
+        src="boba-tier-logo.png"
+      />
+    </a>
+  </section>
+  <section
+    className="nav-links"
+  >
+    <section
+      className="desktop-nav"
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <p>
+          Home
+        </p>
+      </a>
+      <a
+        aria-current={null}
+        href="/shops"
+        onClick={[Function]}
+      >
+        <p>
+          Shop List
+        </p>
+      </a>
+      <a
+        aria-current={null}
+        href="/rankings"
+        onClick={[Function]}
+      >
+        <p>
+          Top 10
+        </p>
+      </a>
+      <select>
+        <option
+          value="Houston"
+        >
+          Houston, TX
+        </option>
+      </select>
+      <a
+        aria-current={null}
+        href="/login"
+        onClick={[Function]}
+      >
+        <p>
+          Log In
+        </p>
+      </a>
+      <a
+        aria-current={null}
+        href="/register"
+        onClick={[Function]}
+      >
+        <p>
+          Sign Up
+        </p>
+      </a>
+    </section>
+    <section
+      className="mobile-nav"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-bars fa-w-14 bars"
+        data-icon="bars"
+        data-prefix="fas"
+        focusable="false"
+        onClick={[Function]}
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </section>
+  </section>
+</nav>
+`;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Landing without data 1`] = `
+<section
+  className="landing-page"
+>
+  <section
+    className="landing"
+  >
+    <h2>
+      Rate the Best Boba Tea in Town!
+    </h2>
+    <p
+      className="boba-description"
+    >
+      Boba Tier lets you rate all the drinks in boba shops by city. Along with keeping track of all the drinks you previously rated, you will also be able to see which drinks are the highest rated for that city. You can also leave comments on the shop pages expressing your thoughts about their drinks. Get started by using the navigation pane or click on demo to try it out as a guest!
+    </p>
+    <button
+      className="demo"
+      onClick={[Function]}
+    >
+      Demo
+    </button>
+    <div />
+    <p
+      className="city-notice"
+    >
+      Boba Tier is currently available for shops in Houston, TX. More cities will be added in the future!
+    </p>
+  </section>
+  <section
+    className="landing-info"
+  >
+    <img
+      alt="boba drink 2"
+      className="landing-image"
+      src="boba-drink-2.jpg"
+    />
+    <img
+      alt="boba drink 1"
+      className="landing-image"
+      src="boba-drink-1.jpg"
+    />
+    <img
+      alt="boba drink 3"
+      className="landing-image"
+      src="boba-drink-3.jpg"
+    />
+  </section>
+</section>
+`;

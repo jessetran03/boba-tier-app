@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render NavMobile without data 1`] = `
+<section
+  className="mobile-nav-links mobile-nav"
+>
+  <a
+    aria-current="page"
+    className="active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <p>
+      Home
+    </p>
+  </a>
+  <hr />
+  <a
+    aria-current={null}
+    href="/shops"
+    onClick={[Function]}
+  >
+    <p>
+      Shop List
+    </p>
+  </a>
+  <hr />
+  <a
+    aria-current={null}
+    href="/rankings"
+    onClick={[Function]}
+  >
+    <p>
+      Top 10 Drinks
+    </p>
+  </a>
+  <hr />
+  <a
+    aria-current={null}
+    href="/login"
+    onClick={[Function]}
+  >
+    <p>
+      Log In
+    </p>
+  </a>
+  <hr />
+  <a
+    aria-current={null}
+    href="/register"
+    onClick={[Function]}
+  >
+    <p>
+      Sign Up
+    </p>
+  </a>
+</section>
+`;

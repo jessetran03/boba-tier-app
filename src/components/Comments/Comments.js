@@ -4,10 +4,14 @@ import config from '../../config'
 import TokenService from '../../services/token-service'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import moment from 'moment';
+import PropTypes from 'prop-types'
 
 export default class Comments extends Component {
   state = {
     comments: []
+  }
+  static propTypes = {
+    shopId: PropTypes.number,
   }
 
   componentDidMount() {

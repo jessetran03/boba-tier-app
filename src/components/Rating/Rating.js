@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Rating.css'
+import PropTypes from 'prop-types'
 
 export default class Rating extends Component {
   static defaultProps = {
     rating: 0
+  }
+  static propTypes = {
+    rating: PropTypes.number,
   }
 
   render() {

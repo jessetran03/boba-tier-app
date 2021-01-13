@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Register without data 1`] = `
+<form
+  className="register"
+  onSubmit={[Function]}
+>
+  <h2>
+    Sign up
+  </h2>
+  <div
+    role="alert"
+  />
+  <label
+    htmlFor="first-name-input"
+  >
+    First Name:
+  </label>
+  <input
+    autoFocus={true}
+    id="first-name-input"
+    name="first-name"
+    type="text"
+  />
+  <br />
+  <label
+    htmlFor="last-name-input"
+  >
+    Last Name:
+  </label>
+  <input
+    id="last-name-input"
+    name="last-name"
+    type="text"
+  />
+  <br />
+  <label
+    htmlFor="username-input"
+  >
+    Username:
+  </label>
+  <input
+    id="username-input"
+    name="username"
+    type="text"
+  />
+  <br />
+  <label
+    htmlFor="password-input"
+  >
+    Password:
+  </label>
+  <input
+    id="password-input"
+    name="password"
+    type="password"
+  />
+  <br />
+  <button
+    type="submit"
+  >
+    Create account
+  </button>
+</form>
+`;
