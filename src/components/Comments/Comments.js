@@ -70,7 +70,7 @@ export default class Comments extends Component {
   render() {
     const comments = this.state.comments
     return (
-      <section className="shop-comments">
+      <section className='shop-comments'>
         <h3>Comments</h3>
         {comments.length === 0 &&
           <p><i>Be the first to comment!</i></p>
@@ -84,7 +84,7 @@ export default class Comments extends Component {
                   <FontAwesomeIcon className='user' icon='user' />
                   {comment.user.user_name}
                 </h4>
-                <h5>{moment(comment.date_created).format("dddd, MMMM Do, YYYY")}</h5>
+                <h5>{moment(comment.date_created).format('dddd, MMMM Do, YYYY')}</h5>
                 <p>{comment.text}</p>
               </li>
           )}
@@ -95,7 +95,7 @@ export default class Comments extends Component {
             name='text'
             id='text'
             placeholder='Write a comment here'
-            maxLength="500"
+            maxLength='500'
           />
           <br />
           <button type='submit'>
